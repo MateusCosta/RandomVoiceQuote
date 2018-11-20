@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Voice Quote</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+    <link rel="stylesheet" href="css/style-randomquotes.css" />
+</head>
+
+<body class="main">
+    <!--  -->
+
+    <div class="hero is-warning is-bold is-fullheight">
+        <div class="hero-header">
+            <nav class="navbar " role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand brand-text">
+                        <!-- <a href="#" class="navbar-item">
+                                    <img src="img/image1.png" alt="Mateus Costa" >
+                                </a> -->
+                        <a class="navbar-item brand-text is-bold" href="../">
+                            Mateus Costa <span class="large">( )</span>
+                        </a>
+                    </div>
+                    <div class="navbar-menu">
+                        <div class="navbar-start">
+
+                        </div>
+                        <div class="navbar-end">
+                            <a href="#" class="navbar-item">Skills</a>
+                            <a href="#" class="navbar-item">Work</a>
+                            <a href="#" class="navbar-item">About</a>
+                            <a href="#" class="navbar-item">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="divider x3"></div>
+            <div class="container">
+
+
+                <h1 class="title is-1">Random Voice Quote</h1>
+                <h2 class="subtitle">A small list of the randomest things in the brazilian internet</h2>
+
+                <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Mateus Costa</a></li>
+                        <li><a href="#">Demos</a></li>
+                        <li class="is-active is-bold"><a href="#" aria-current="page">Random Voice Quote</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+               
+                       
+                    <div class="columns is-mobile is-multiline is-centered">
+                            <div class="column is-narrow">
+                              
+                            </div>
+                            <div class="column is-narrow">
+                              
+                            </div>
+                            <div class="column is-narrow">
+                                    <a class="button is-warning is-inverted is-outlined is-giantic" onclick="RandomVocieQuote();">
+                                            <span class="icon">
+                                                    <i class="fas fa-random"></i>
+                                                  </span>
+                                    </a>
+                                   
+
+                            </div>
+                            <div class="column is-narrow">
+                            
+                            </div>
+                            <div class="column is-narrow">
+                             
+                            </div>
+                          </div>
+
+               
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+
+ function RandomVocieQuote() {
+          var quotes = ["ai-pai-para-hihi", "chupa_meu_pinto", "que-demais_2", "voz de galinha"];
+            var quote = quotes[generateRandomNumber(0,quotes.length)];
+          new Audio('./audio/'+quote+'.mp3').play()
+      }
+
+      function generateRandomNumber(min_value , max_value) {
+    
+    let random_number = Math.random() * (max_value-min_value) + min_value;
+     return Math.floor(random_number);
+ }
+
+
+</script>
+</body>
+
+</html>
